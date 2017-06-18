@@ -26,7 +26,7 @@ function MultiplicationTable () {
             }
             if (i === 0) {
                 for (let z = 1; z < array.length; z++) {
-                    array[z] = z
+                    array[z] = z;
                 }
             }
             table.push(array);
@@ -43,6 +43,3 @@ function MultiplicationTable () {
     }
     return table;
 }
-
-let multiplicationTable = MultiplicationTable();
-console.log(multiplicationTable);

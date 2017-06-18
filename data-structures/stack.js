@@ -25,12 +25,12 @@ class Stack {
         if (this.topOfStack >= 0) {
             this.stackArray[this.topOfStack] = -1;
             console.log('topofstack', this.topOfStack);
-            console.log(this.stackArray[this.topOfStack])
+            console.log(this.stackArray[this.topOfStack]);
             return this.stackArray[this.topOfStack--];
         } else {
             console.log('else pop called');
             console.log(this.topOfStack);
-            this.stack
+            // this.stack;
             return -1;
         }
     }
@@ -39,16 +39,3 @@ class Stack {
         return this.stackArray[this.topOfStack];
     }
 }
-
-let myStack = new Stack(2);
-let size = 60;
-for (let i = 0; i <= size; i++) {
-    myStack.push(i);
-}
-for (let i = 0; i <= size*2; i++) {
-    myStack.pop();
-}
-console.log(myStack.stackArray);
-console.log('stackSize', myStack.stackSize);
-console.log('Doubled', myStack.stackDoubleCount);
-console.log('stackLength', myStack.stackArray.length);

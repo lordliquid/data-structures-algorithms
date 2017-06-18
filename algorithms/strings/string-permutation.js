@@ -20,5 +20,3 @@ function permut(string) {
     }
     return permutations;
 }
-
-console.log(permut('ADDDSA'));

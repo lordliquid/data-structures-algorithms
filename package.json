@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "env": {
+    "browser": true,
+    "node": true  
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lordliquid/data-structures-algorithms.git"

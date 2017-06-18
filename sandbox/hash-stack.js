@@ -21,9 +21,9 @@ function ArrayNode(index) {
              this.addValue = function (value) {
                  this.node[value] = value;
                  this.count[value]++;
-             }
+             };
         })(index)
-    }
+    };
     return this;
 }
 
@@ -33,7 +33,7 @@ function HashStack(len) {
             this.keys = {};
             this.length = length;
             this.numOfArrays = Math.ceil(this.length / 32);
-            this.getNumOfArrays = function () { return this.numOfArrays };
+            this.getNumOfArrays = function () { return this.numOfArrays; };
             this.addNode = function (idx) {            
                 return Object.create(ArrayNode(idx));
             };
@@ -67,14 +67,14 @@ function HashStack(len) {
                         this.keys[key].addValue(value);
                     }
                 }
-                return 
+                return;
             };
 
             for (let i = 0; i < this.getNumOfArrays(); i++) {
                 this.keys[i] = this.addNode(i);
             }
         })(len)        
-    }
+    };
     return this;
 }
 
@@ -82,7 +82,7 @@ var arr = Object.create(HashStack(33));
 arr.push(2);
 arr.push(2);
 arr.push(2);
-console.log('keys', arr.keys[0].node)
-console.log('count', arr.keys[0].count)
+console.log('keys', arr.keys[0].node);
+console.log('count', arr.keys[0].count);
 let val = arr.get(2);
 console.log(val);
